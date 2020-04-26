@@ -20,7 +20,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
-
+ 
 NeoBundle 'Shougo/vimproc.vim', {
 			\ 'build' : {
 			\     'windows' : 'tools\\update-dll-mingw',
@@ -59,13 +59,13 @@ NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'lilydjwg/colorizer'
 NeoBundle 'tpope/vim-fugitive'
-:set statusline+=%{fugitive#statusline()}
+:set statusline+=%{fugitive#statusline()} 
 " NeoBundle 'itchyny/lightline.vim'
 " NeoBundle 'taketwo/vim-ros'
 
 
 
-""マークダウン
+""マークダウン 
 "NeoBundle 'plasticboy/vim-markdown'
 "NeoBundle 'kannokanno/previm'
 "NeoBundle 'tyru/open-browser.vim'
@@ -83,7 +83,8 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" setting
+
+"0419
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
@@ -98,7 +99,7 @@ set hidden
 set showcmd
 
 
-" 見た目
+" 見た目系
 " 行番号を表示
 set number
 
@@ -172,5 +173,17 @@ noremap <S-j>   }
 noremap <S-k>   {
 noremap <S-l>   $
 
-"コメントアウトのショートカット＜Ctrl + /＞
-noremap <silent> <C-i> i"<ESC>
+"インサートモード中のカーソルの挙動
+inoremap <C-e> <Esc>
+inoremap <C-l> <Esc>$a
+inoremap <C-h> <Esc>^i
+
+"インサートモード中の括弧の補完
+inoremap { {}<Left>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
+" インサートモード中のダブルクォーテーション補完
+inoremap " ""<ESC>i
+
