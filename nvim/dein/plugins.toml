@@ -10,6 +10,14 @@ hook_add = '''
 [[plugins]]
 repo  = 'cespare/vim-toml'
 
-# Golang
+ Golang
 [[plugins]]
 repo = 'fatih/vim-go'
+
+
+# Color schemes
+[[plugins]]
+repo = 'raphamorim/lucario' #colorscheme lucario
+
+[[plugins]]
+repo = 'jdkanani/vim-material-theme' #olorscheme material-theme
