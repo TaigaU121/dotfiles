@@ -160,4 +160,3 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 " インサートモード中のダブルクォーテーション補完
 inoremap " ""<ESC>i
 
->>>>>>> origin/master
